@@ -9,17 +9,17 @@ import {
 @Entity()
 export class User {
   @PrimaryGeneratedColumn('uuid')
-  id!: string;
+  id: string;
   @Column()
-  name!: string;
+  name: string;
   @Column({ unique: true })
-  email!: string;
+  email: string;
   @Column()
-  password!: string;
+  password: string;
   @Column({ default: false })
-  forceLogout!: boolean;
+  forceLogout: boolean;
   @CreateDateColumn()
-  createAt!: Date;
+  createAt: Date;
   @UpdateDateColumn()
-  updatedAt!: Date;
+  updatedAt: Date;
 }
