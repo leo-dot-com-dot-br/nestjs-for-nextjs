@@ -10,16 +10,22 @@ import {
 export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
+
   @Column()
   name: string;
+
   @Column({ unique: true })
   email: string;
+
   @Column()
   password: string;
+
   @Column({ default: false })
   forceLogout: boolean;
+
   @CreateDateColumn()
   createAt: Date;
+
   @UpdateDateColumn()
   updatedAt: Date;
 }
